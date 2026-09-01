@@ -1,0 +1,346 @@
+/* ==========================================================================
+   TECHNOSOFT MASTERS INC. - Responsive Stylesheet
+   Mobile First & Breakpoint Optimizations
+   ========================================================================== */
+
+/* --- Large Desktops (Above 1400px) --- */
+@media (min-width: 1400px) {
+  :root {
+    --container-max: 1320px;
+  }
+
+  .hero-headline {
+    font-size: 2.85rem;
+  }
+}
+
+/* --- Laptops & Standard Desktops (Under 1200px) --- */
+@media (max-width: 1199px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+  }
+
+  .services-grid,
+  .solutions-grid,
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about-highlights-grid {
+    gap: 20px;
+  }
+
+  .contact-grid {
+    gap: 36px;
+  }
+}
+
+/* --- Tablets (Under 992px) --- */
+@media (max-width: 991px) {
+  section {
+    padding: 80px 0;
+  }
+
+  .site-header {
+    height: 76px;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background: rgba(4, 10, 24, 0.96);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-left: 1.5px solid rgba(0, 210, 255, 0.3);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 36px 40px 36px;
+    gap: 24px;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -15px 0 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 114, 245, 0.2);
+    z-index: 1001;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+  }
+
+  .nav-actions {
+    display: none; /* In navbar, will be inside drawer */
+  }
+
+  .nav-menu .drawer-cta-wrap {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-menu .drawer-cta-wrap .btn {
+    width: 100%;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--header-height) + 30px);
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-supporting-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-secondary-tagline {
+    border-left: none;
+    border-top: 2.5px solid var(--gold-warm);
+    border-radius: var(--radius-sm);
+  }
+
+  .hero-partner-chips {
+    justify-content: center;
+  }
+
+  .hero-visual-wrap {
+    min-height: 480px;
+    width: 100%;
+  }
+
+  .floating-chip-1 {
+    top: 5px;
+    right: 5px;
+  }
+
+  .floating-chip-2 {
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .about-grid-lead {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blueprint-steps-grid,
+  .networking-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .tech-blueprint-box {
+    padding: 32px 24px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+/* --- Mobile Phones (Under 768px) --- */
+@media (max-width: 767px) {
+  section {
+    padding: 65px 0;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-header {
+    margin-bottom: 38px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-headline {
+    font-size: 1.85rem;
+  }
+
+  .hero-supporting-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-hud-card {
+    padding: 22px 18px;
+  }
+
+  .floating-chip {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+  }
+
+  .hero-visual-wrap {
+    min-height: 420px;
+  }
+
+  .about-main-card,
+  .partners-wrap {
+    padding: 32px 20px;
+  }
+
+  .services-grid,
+  .solutions-grid,
+  .why-us-grid,
+  .blueprint-steps-grid,
+  .partners-grid,
+  .networking-products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cta-box {
+    padding: 42px 22px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .contact-details-card,
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .floating-chip {
+    display: none; /* avoid cluttering mobile screens */
+  }
+
+  .hero-hud-card {
+    padding: 22px;
+  }
+}
+
+/* --- Small Mobile Phones (Under 480px) --- */
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .brand-tagline-sub {
+    font-size: 0.6rem;
+  }
+
+  .brand-emblem-wrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+  }
+}
+
+/* Modal Responsive */
+@media (max-width: 767px) {
+  .modal-content-wrap {
+    padding: 30px 20px;
+  }
+
+  .modal-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-actions-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal-actions-bar .btn {
+    width: 100%;
+  }
+}
